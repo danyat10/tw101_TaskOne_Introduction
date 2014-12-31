@@ -6,11 +6,21 @@ public class twTaskOneIntroduction {
         printAsterisk();
         drawHorizontalLine(8);
         drawVerticalLine(3);
+        drawRightAngle(3);
+    }
+
+    public static void drawRightAngle(int n) {
+        System.out.println("Draw a right angle:");
+        String output = "";
+        for (int i=0; i<n; i++){
+            output = output+="*";
+            System.out.println(output);
+        }
     }
 
     public static void drawVerticalLine(int n) {
         int x = 0;
-        System.out.println("Draw a vertical Line:");
+        System.out.println("Draw a vertical line:");
         while (x < n) {
             System.out.println("*");
             x = x + 1;
@@ -19,7 +29,7 @@ public class twTaskOneIntroduction {
 
     public static void drawHorizontalLine(int n) {
         int x = 0;
-        System.out.println("Draw a horizontal Line:");
+        System.out.println("Draw a horizontal line:");
         while (x < n){
             System.out.print("*");
             x = x + 1;
