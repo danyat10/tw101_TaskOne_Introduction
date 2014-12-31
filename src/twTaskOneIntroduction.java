@@ -9,7 +9,40 @@ public class twTaskOneIntroduction {
         drawRightAngle(3);
 
         drawIsoscelesTriangle(3);
-        drawDiamond(5);
+        drawDiamond(3);
+        drawDiamondWithName(5, "Bill");
+    }
+
+    public static void drawDiamondWithName(int n, String name) {
+        System.out.println("Draw a Diamond with name in the middle:");
+        int cols = 1;
+        int spaces = n/2+1;
+
+        for(int row=0; row<n; row++) {
+            if(row == n/2){
+                System.out.println(name);
+                cols-=2;
+                spaces+=1;
+                continue;
+            }
+            for (int s=1; s<spaces; s++){
+                System.out.print(" ");
+            }
+
+            for (int i=0; i<cols; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+            if(row < n/2){
+                cols+=2;
+                spaces-=1;
+            }
+            else {
+                cols-=2;
+                spaces+=1;
+            }
+        }
     }
 
     public static void drawDiamond(int n) {
