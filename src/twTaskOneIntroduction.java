@@ -9,10 +9,32 @@ public class twTaskOneIntroduction {
         drawRightAngle(3);
 
         drawIsoscelesTriangle(3);
-        drawDiamond(3);
+        drawDiamond(5);
         drawDiamondWithName(5, "Bill");
 
         fizzBuzz(100);
+        generate(30);
+    }
+
+    public static void generate(int primeNum) {
+        System.out.println("The Prime Factors of your number are:");
+        for (int i = 2; i <= primeNum; i++) {
+            int n = 0;
+            while (primeNum % i == 0) {
+                primeNum /= i;
+                n++;
+            }
+
+            if (n != 0) {
+                for (int j = n; j > 0; j--) {
+                    System.out.print(i);
+
+                    if (primeNum != 1) {
+                        System.out.print(",");
+                    }
+                }
+            }
+        }
     }
 
     public static void fizzBuzz(int number) {
