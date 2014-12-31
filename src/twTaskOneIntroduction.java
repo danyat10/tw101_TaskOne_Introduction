@@ -9,63 +9,40 @@ public class twTaskOneIntroduction {
         drawRightAngle(3);
 
         drawIsoscelesTriangle(3);
-        drawDiamond(3);
+
     }
 
-    public static  void drawDiamond (int n) {
-        System.out.println("Draw a diamond");
-        int rowsPrime = 0;
-        for (int i = n+1; i>0; i--){
-            for (int j = 0; j<(2*i)-1; j++) {
+    public static void drawIsoscelesTriangle(int n) {
+        System.out.println("Draw an Isosceles Triangle:");
+        int cols = 1;
+        int spaces = n;
+
+        for(int row=0; row<n; row++) {
+
+            for (int s=1; s<spaces; s++){
                 System.out.print(" ");
             }
 
-            for (int d=0; d<(2*rowsPrime)-1; d++) {
-                System.out.print("*" + " ");
-            }
-            rowsPrime +=1;
-            System.out.println(" ");
-        }
-
-        rowsPrime -= 2; // <- middle line is already printed, so skip that
-
-        //bottom triangle
-        for (int i=1; i<n+1; i++) {
-            for (int j=0; j<(2*i)+1; j++) {
-                System.out.print(" ");
-            }
-            for (int d=0; d<(2*rowsPrime)-1; d++) {
-                System.out.print("*" + " ");
+            for (int i=0; i<cols; i++) {
+                System.out.print("*");
             }
 
-            rowsPrime--;
-            System.out.println(" ");
+            cols+=2;
+            spaces-=1;
+            System.out.println();
         }
     }
 
-    public static  void drawIsoscelesTriangle (int n) {
-        System.out.println("Draw Isosceles Triangle");
-        int rowsPrime = 0;
-        for (int i = n + 1; i > 0; i--) {
-            for (int j = 0; j < (2 * i) - 1; j++) {
-                System.out.print(" ");
-            }
-
-            for (int d = 0; d < (2 * rowsPrime) - 1; d++) {
-                System.out.print("*" + " ");
-            }
-            rowsPrime += 1;
-            System.out.println(" ");
-        }
-        System.out.println(" ");
-    }
 
     public static void drawRightAngle(int n) {
         System.out.println("Draw a right angle:");
-        String output = "";
-        for (int i=0; i<n; i++){
-            output = output+="*";
-            System.out.println(output);
+        int cols = 1;
+        for(int j=0; j<n; j++) {
+            for (int i = 0; i<cols; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            cols+=1;
         }
     }
 
