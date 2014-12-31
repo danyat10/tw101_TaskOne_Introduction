@@ -9,7 +9,34 @@ public class twTaskOneIntroduction {
         drawRightAngle(3);
 
         drawIsoscelesTriangle(3);
+        drawDiamond(5);
+    }
 
+    public static void drawDiamond(int n) {
+        System.out.println("Draw a Diamond:");
+        int cols = 1;
+        int spaces = n/2+1;
+
+        for(int row=0; row<n; row++) {
+
+            for (int s=1; s<spaces; s++){
+                System.out.print(" ");
+            }
+
+            for (int i=0; i<cols; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+            if(row < n/2){
+                cols+=2;
+                spaces-=1;
+            }
+            else {
+                cols-=2;
+                spaces+=1;
+            }
+        }
     }
 
     public static void drawIsoscelesTriangle(int n) {
@@ -32,7 +59,6 @@ public class twTaskOneIntroduction {
             System.out.println();
         }
     }
-
 
     public static void drawRightAngle(int n) {
         System.out.println("Draw a right angle:");
