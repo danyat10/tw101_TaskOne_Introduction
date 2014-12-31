@@ -11,6 +11,24 @@ public class twTaskOneIntroduction {
         drawIsoscelesTriangle(3);
         drawDiamond(3);
         drawDiamondWithName(5, "Bill");
+
+        fizzBuzz(100);
+    }
+
+    public static void fizzBuzz(int number) {
+        System.out.println("Welcome to FizzBuzz:");
+        for(int n=1; n<=number; n++){
+            if(n%5 == 0 && n%3 ==0)
+                System.out.println("FizzBuzz");
+
+            else if (n%3 ==0)
+                System.out.println("Fizz");
+
+            else if (n%5 == 0)
+                System.out.println("Buzz");
+
+            else System.out.println(n);
+        }
     }
 
     public static void drawDiamondWithName(int n, String name) {
